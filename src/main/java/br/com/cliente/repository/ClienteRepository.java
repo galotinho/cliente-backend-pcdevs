@@ -14,4 +14,7 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long>{
 	@Query("from Cliente where nome like :nome%")
 	List<Cliente> findByNome(String nome); //Hibernate que faz implementação de método
 	
+	@Query("from Cliente order by id DESC")
+	List<Cliente> findAll(); //Hibernate que faz implementação de método
+	
 }

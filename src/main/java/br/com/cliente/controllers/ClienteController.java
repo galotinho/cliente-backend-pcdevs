@@ -59,17 +59,7 @@ public class ClienteController {
 	
 	}
 
-	private ClienteOutputDTO conveterDTO(Cliente cli) {
-		
-		ClienteOutputDTO dto = new ClienteOutputDTO();
-		
-		dto.setNome(cli.getNome());
-		dto.setSobrenome(cli.getSobrenome());
-		dto.setTelefone(cli.getTelefone());
-		
-		return dto;
-	}
-
+	
 	@PutMapping("/{id}")
 	public ResponseEntity<ClienteOutputDTO> atualizar(@RequestBody ClienteInputDTO clienteInput, @PathVariable Long id) {
 		
